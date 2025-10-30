@@ -31,7 +31,7 @@ export default function UserForm({ onSubmit, onCancel, initialData }) {
         setForm({ ...form, [name]: value });
     };
 
-    // 📌 this will be passed to AddressForm
+    // this will be passed to AddressForm
     const handleAddressChange = (field, value) => {
         setForm((prev) => ({
             ...prev,
@@ -110,7 +110,7 @@ export default function UserForm({ onSubmit, onCancel, initialData }) {
                 </select>
                 {errors.gender && <p className="text-red-500 text-sm">{errors.gender}</p>}
 
-                {/* 👇 Include Address Subform */}
+                 // Include Address Subform 
                 <AddressForm
                     address={form.address}
                     onChange={handleAddressChange}
