@@ -4,7 +4,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteUser } from "../redux/userSlice";
 import ConfirmDialog from "./ConfirmDialog";
-import { CONFIG } from "../config/settings"; // ✅ import config
+import { CONFIG } from "../config/settings"; // import config
 
 export default function UserTable({ onEdit }) {
   const users = useSelector((s) => s.users);
@@ -62,7 +62,7 @@ export default function UserTable({ onEdit }) {
                   </button>
                 </td>
                 <td className="p-3 text-center space-x-2">
-                  {/* ✅ Enable/disable Edit based on config */}
+                  {/* Enable/disable Edit based on config */}
                   <button
                     className={`bg-green-600 text-white px-4 py-2 rounded ${!CONFIG.editable ? "opacity-50 cursor-not-allowed" : ""
                       }`}
@@ -96,7 +96,7 @@ export default function UserTable({ onEdit }) {
         </tbody>
       </table>
 
-      {/* ✅ Custom Confirm Modal */}
+      {/* Custom Confirm Modal */}
       <ConfirmDialog
         show={confirmDialog.show}
         message="Are you sure you want to delete this user?"
